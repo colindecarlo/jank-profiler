@@ -1,0 +1,21 @@
+{
+    "name": "colindecarlo/jank-profiler",
+    "description": "A profiler for when you don't want to figure out profilers.",
+    "version": "0.1.0",
+    "keywords": ["profile", "jank", "yolo"],
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Colin DeCarlo",
+            "email": "colin@thedecarlos.ca"
+        }
+    ],
+    "autoload": {
+        "psr-4": {
+            "JankProfiler\\": "src"
+        }
+    },
+    "require": {
+        "php": ">=5.6.0"
+    }
+}
