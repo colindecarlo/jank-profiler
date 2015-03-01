@@ -3,7 +3,7 @@
 For when you don't want to figure out actual profilers.
 
 Use Jank Profiler to wrap individual objects in your application to track memory usage and 
-exectution time of method calls belonging to that objects public api.
+execution time of method calls belonging to that objects public api.
 
 ## Usage
 
