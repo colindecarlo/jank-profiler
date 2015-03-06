@@ -71,9 +71,14 @@ class JankProfiler implements JsonSerializable
         $this->wrapped = null;
     }
 
-    public function jsonSerialize($options = 0)
+    public function jsonSerialize()
     {
-        return json_encode($this->calls, $options);
+        return $this->calls;
+    }
+
+    public function toJson($options = 0)
+    {
+        return json_encode($this->jsonSerialize(), $options);
     }
 
     public function __call($method, $args)
