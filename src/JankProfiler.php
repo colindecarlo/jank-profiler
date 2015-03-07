@@ -58,10 +58,10 @@ class JankProfiler implements JsonSerializable
                 return $this->calls;
                 break;
             case 'json':
-                return $this->jsonSerialize(JSON_PRETTY_PRINT);
+                return json_encode($this, JSON_PRETTY_PRINT);
                 break;
             default:
-                return $this->jsonSerialize();
+                return json_encode($this);
         }
     }
 
@@ -71,9 +71,9 @@ class JankProfiler implements JsonSerializable
         $this->wrapped = null;
     }
 
-    public function jsonSerialize($options = 0)
+    public function jsonSerialize()
     {
-        return json_encode($this->calls, $options);
+        return $this->calls;
     }
 
     public function __call($method, $args)
